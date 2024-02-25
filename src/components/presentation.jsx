@@ -6,7 +6,7 @@ const Presentation = () => {
     <>
       <section
         id='presentation'
-        className='flex flex-col lg:flex-row items-center justify-evenly gap-5 w-full min-h-svh h-full mt-10 md:mt-14 lg:mt-0 p-0 md:px-10'
+        className='flex flex-col lg:flex-row items-center justify-between gap-5 w-full max-w-7xl min-h-svh max-2xl:min-h-[80svh] h-full mt-16 lg:mt-0 p-0 md:px-20'
       >
         <div className='flex flex-col gap-3 p-5 lg:p-0 items-center lg:items-start'>
           <h1 className='text-6xl font-bold text-center lg:text-left'>
@@ -19,9 +19,13 @@ const Presentation = () => {
           <h4 className='text-2xl font-semibold'>
             Desarrollador <span className='text-sky-300'>FullStack</span>
           </h4>
-          <p className="flex text-xl gap-1">
-            <MapPinIcon height={22} width={22} className="animate-bounce self-center" />
-            <span className='text-sky-300'>Misiones</span> - Argentina 
+          <p className='flex text-xl gap-1'>
+            <MapPinIcon
+              height={22}
+              width={22}
+              className='animate-bounce self-center'
+            />
+            <span className='text-sky-300'>Misiones</span> - Argentina
           </p>
           <div className='flex flex-row gap-5 mt-3'>
             <a
@@ -79,7 +83,13 @@ const Presentation = () => {
         </div>
         <div>
           <picture>
-            <img alt='Leandro Boos' fetchPriority="high" src={foto} className='h-72 md:h-96 lg:h-80 xl:h-96 w-auto rounded-[50%] hover:shadow-sky-300 hover:shadow-2xl duration-500' />
+            <img
+              alt='Leandro Boos'
+              // eslint-disable-next-line react/no-unknown-property
+              fetchPriority='high'
+              src={foto}
+              className='h-72 md:h-96 lg:h-80 xl:h-96 w-auto rounded-[50%] hover:shadow-sky-300 hover:shadow-2xl duration-500'
+            />
           </picture>
         </div>
       </section>

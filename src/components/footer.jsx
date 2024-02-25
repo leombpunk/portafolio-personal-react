@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <>
-      <footer className='w-full'>
-        <div className='flex flex-row gap-10 items-center justify-between max-w-screen-xl px-4 pt-5 pb-10 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8 border-t border-sky-300/50'>
+      <footer className='w-full border-t border-sky-300/50'>
+        <div className='flex flex-row gap-10 items-center justify-between max-w-screen-xl px-4 pt-5 pb-10 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8 '>
           <p className='mt-8 text-base leading-6 text-center text-gray-300'>
             Desarrollado por{" "}
             <a
@@ -20,7 +20,7 @@ const Footer = () => {
               href='https://linkedin.com/in/leandroboos91/'
               target='_blank'
               rel='noopener norreferer'
-              className='text-gray-300 hover:text-gray-500'
+              className='text-gray-300 hover:text-sky-300'
             >
               <span className='sr-only'>LinkedIn</span>
               <svg
@@ -40,7 +40,7 @@ const Footer = () => {
               href='https://github.com/leombpunk'
               target='_blank'
               rel='noopener norreferer'
-              className='text-gray-300 hover:text-gray-500'
+              className='text-gray-300 hover:text-sky-300'
             >
               <span className='sr-only'>GitHub</span>
               <svg

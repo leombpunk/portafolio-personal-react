@@ -3,10 +3,10 @@ import { Bars3Icon, CodeBracketIcon, XMarkIcon } from "@heroicons/react/24/outli
 
 const navigation = [
   { name: "Incio", href: "#presentation", current: true },
-  { name: "Acerca de", href: "#", current: false },
-  { name: "Proyectos", href: "#", current: false },
-  { name: "Educación", href: "#", current: false },
-  { name: "Habilidades", href: "#", current: false },
+  { name: "Acerca de", href: "#aboutme", current: false },
+  { name: "Proyectos", href: "#projects", current: false },
+  { name: "Educación", href: "#education", current: false },
+  { name: "Habilidades", href: "#skills", current: false },
 ]
 
 function classNames(...classes) {
@@ -17,7 +17,7 @@ const NavMenu = () => {
   return (
     <Disclosure
       as='nav'
-      className='w-full bg-transparent backdrop-blur-sm fixed'
+      className='w-full bg-transparent backdrop-blur-sm fixed border-b border-sky-300/50 z-10'
     >
       {({ open }) => (
         <>
@@ -25,7 +25,7 @@ const NavMenu = () => {
             <div className='relative flex h-16 items-center justify-between'>
               <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
                 {/* Mobile menu button*/}
-                <Disclosure.Button className='relative inline-flex items-center justify-center p-2 text-white hover:text-sky-300 focus:outline-none focus:ring-0'>
+                <Disclosure.Button className='relative inline-flex items-center justify-center p-2 text-white hover:text-sky-300'>
                   <span className='absolute -inset-0.5' />
                   <span className='sr-only'>Abrir menú principal</span>
                   {open ? (
@@ -36,9 +36,9 @@ const NavMenu = () => {
                 </Disclosure.Button>
               </div>
               <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
-                <div className='flex flex-shrink-0 items-center'>
+                <a className='flex flex-shrink-0 items-center' href={navigation[0].href} title={navigation[0].name}>
                   <CodeBracketIcon className='h-10 w-auto text-sky-300 animate-pulse' title="Leandro Boos" />
-                </div>
+                </a>
                 <div className='hidden sm:ml-6 sm:block'>
                   <div className='flex space-x-4'>
                     {navigation.map((item) => (
