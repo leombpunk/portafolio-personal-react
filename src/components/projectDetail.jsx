@@ -74,7 +74,7 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                       </div>
                       <div className='w-full px-1'>
                         <picture>
-                          <img alt="image-project" src={data?.imageSrc} className='max-w-lg w-full h-[320px] rounded-xl bg-center bg-cover bg-no-repeat aspect-video' />
+                          <img alt="image-project" src={data?.imageSrc} className='max-w-lg w-full h-[320px] shadow-md shadow-sky-300 rounded-xl bg-center bg-cover bg-no-repeat aspect-video' />
                         </picture>
                       </div>
                       <div className='px-1 mt-3'>

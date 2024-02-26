@@ -31,51 +31,31 @@ const Projects = () => {
                 className='flex flex-col items-center justify-center w-full h-[250px] bg-blue-950 border border-sky-300 rounded-xl overflow-hidden hover:cursor-pointer group'
               >
                 <div
-                  className='flex items-center justify-center w-full h-full group-hover:scale-110 duration-500 bg-gray-400 bg-center bg-cover blur group-hover:blur-0'
+                  className='flex items-center justify-center w-full h-full group-hover:scale-110 duration-500 bg-gray-400 bg-center bg-cover blur-0 lg:blur group-hover:blur-0'
                   style={{ backgroundImage: `url(${project.imageSrc})` }}
                 ></div>
                 <h3 className='absolute text-center text-2xl font-semibold group-hover:text-sky-300 px-5 w-[250px] h-[230px]'>
                   {project.name}
                 </h3>
+                <div className='absolute flex flex-row justify-between gap-x-5 text-sky-300 text-lg group-hover:opacity-0 duration-200 w-[300px] mt-40'>
+                  {project.context ? (
+                    <span className='bg-gray-900/80 py-1 px-2 rounded-2xl border border-sky-300/50'>
+                      {project.context}
+                    </span>
+                  ) : (
+                    ""
+                  )}
+                  {project.status ? (
+                    <span className='bg-gray-900/80 py-1 px-2 rounded-2xl border border-sky-300/50'>
+                      {project.status}
+                    </span>
+                  ) : (
+                    ""
+                  )}
+                </div>
               </div>
             ))}
-            {/* <div
-              onClick={handleClick}
-              className='flex flex-col items-center justify-center w-full h-[250px] bg-blue-950 border border-sky-300 rounded-xl overflow-hidden hover:cursor-pointer group'
-            >
-              <div
-                className='flex items-center justify-center w-full h-full group-hover:scale-110 duration-500 bg-gray-400 bg-center bg-cover blur group-hover:blur-0'
-                style={{ backgroundImage: `url(${projectImg})` }}
-              ></div>
-              <h3 className='absolute text-center text-2xl font-semibold group-hover:text-sky-300 px-5 w-[250px] h-[230px]'>
-                Proyecto nombre
-              </h3>
-            </div>
-            <div
-              onClick={handleClick}
-              className='flex flex-col items-center justify-center w-full h-[250px] bg-blue-950 border border-sky-300 rounded-xl overflow-hidden hover:cursor-pointer group'
-            >
-              <div
-                className='w-full h-full group-hover:scale-110 duration-500 bg-gray-400 bg-center bg-cover blur group-hover:blur-0'
-                style={{ backgroundImage: `url(${projectImg})` }}
-              ></div>
-              <h3 className='absolute text-center text-2xl font-semibold group-hover:text-sky-300 px-5 w-[250px] h-[230px]'>
-                Proyecto nombre
-              </h3>
-            </div>
-            <div
-              onClick={handleClick}
-              className='flex flex-col items-center justify-center w-full h-[250px] bg-blue-950 border border-sky-300 rounded-xl overflow-hidden hover:cursor-pointer group'
-            >
-              <div
-                className='w-full h-full group-hover:scale-110 duration-500 bg-gray-400 bg-center bg-cover blur group-hover:blur-0'
-                style={{ backgroundImage: `url(${projectImg})` }}
-              ></div>
-              <h3 className='absolute text-center text-2xl font-semibold group-hover:text-sky-300 px-5 w-[250px] h-[230px]'>
-                Proyecto nombre muy muy muy largo
-              </h3>
-            </div>*/}
-          </div> 
+          </div>
         </div>
       </section>
       <ProjectDetail
