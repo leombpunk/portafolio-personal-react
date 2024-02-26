@@ -69,7 +69,7 @@ const Presentation = () => {
               </svg>
             </a>
             <a
-              href='https://www.google.com'
+              href='https://drive.google.com/file/d/1xDrEcre9LLV0hnbMp_LUcY-_2yFVNyle/view?usp=sharing'
               target='_blank'
               rel='noopener norreferer'
               className='text-gray-300 hover:text-sky-300 border border-sky-300 rounded-2xl py-2 px-4 hover:scale-105 hover:shadow-sky-300 hover:shadow-lg duration-500'

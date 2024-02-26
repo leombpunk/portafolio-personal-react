@@ -7,36 +7,33 @@ const AboutMe = () => {
       >
         {/* <div className='grid grid-cols-2 grid-rows-1 gap-5 px-16'> */}
         <div className='w-full h-full px-5 lg:px-10 py-5 text-balance flex flex-col gap-3 border-l-8 border-sky-300/50 bg-blue-900/45 rounded-md shadow-lg order-2 lg:order-1'>
-          <p className='text-balance'>
-            Apasionado desarrollador fullstack con una sólida formación en
-            tecnologías front-end y back-end, me especializo en construir
-            soluciones robustas y escalables que resuelvan problemas del mundo
-            real.
+          <p className='text-pretty  text-lg'>
+            Desarrollador <span className='text-sky-300'>fullstack</span> con
+            una sólida formación en tecnologías front-end y back-end, me
+            especializo en construir{" "}
+            <span className='text-sky-300'>
+              soluciones robustas y escalables
+            </span>{" "}
+            que resuelvan problemas del mundo real.
           </p>
-          <p className='text-balance'>
+          <p className='text-pretty text-lg'>
             Desde que me adentré en el mundo del desarrollo de software, he
-            aprendido nuevas tecnologías y mejorado mis habilidades
-            constantemente. Me encanta enfrentarme a nuevos desafíos y encontrar
-            formas innovadoras de resolver problemas.
+            aprendido nuevas tecnologías y{" "}
+            <span className='text-sky-300'>
+              mejorado mis habilidades constantemente
+            </span>
+            . El aprendizaje continuo y contribuir son la clave para el{" "}
+            <span className='text-sky-300'>
+              crecimiento personal y colectivo
+            </span>
+            .
           </p>
-          <p className='text-balance'>
-            Mi enfoque principal es crear experiencias de usuario excepcionales,
-            centrándome en la usabilidad, el rendimiento y la estética. El
-            desarrollo ágil y la colaboración en equipo son sumamente necesarios
-            para lograr resultados sobresalientes.
-          </p>
-          <p className='text-balance'>
-            Además de mi pasión por la programación, disfruto compartiendo mis
-            conocimientos con la comunidad. Creo en el poder del aprendizaje
-            continuo y en la importancia de contribuir al crecimiento colectivo
-            de la industria.
-          </p>
-          <p className='text-balance'>
-            Estoy emocionado de ser parte de proyectos desafiantes y colaborar
-            con equipos talentosos para llevar ideas desde la concepción hasta
-            la implementación. Siempre abierto a nuevas oportunidades y me
-            encantaría conectarme contigo para explorar cómo puedo agregar valor
-            a tu próximo proyecto.
+          <p className='text-pretty text-lg'>
+            Estoy emocionado de ser parte de proyectos desafiantes y{" "}
+            <span className='text-sky-300'>
+              colaborar con equipos talentosos
+            </span>{" "}
+            para llevar ideas desde la concepción hasta la implementación.
           </p>
         </div>
         <h2 className='text-4xl text-center lg:text-left font-bold text-balance h-full w-full lg:w-96 px-5 py-5 order-1 lg:order-2'>

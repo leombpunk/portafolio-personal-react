@@ -4,16 +4,7 @@ const Footer = () => {
       <footer className='w-full border-t border-sky-300/50'>
         <div className='flex flex-row gap-10 items-center justify-between max-w-screen-xl px-4 pt-5 pb-10 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8 '>
           <p className='mt-8 text-base leading-6 text-center text-gray-300'>
-            Desarrollado por{" "}
-            <a
-              href='https://linkedin.com/in/leandroboos91/'
-              target='_blank'
-              rel='noopener norreferer'
-              className='text-sky-300 hover:text-sky-500'
-            >
-              Leandro Boos
-            </a>
-            .
+            Desarrollado por <span className='text-sky-300'>Leandro Boos</span>.
           </p>
           <div className='flex justify-center mt-8 space-x-6'>
             <a
@@ -24,7 +15,7 @@ const Footer = () => {
             >
               <span className='sr-only'>LinkedIn</span>
               <svg
-                className='w-6 h-6'
+                className='w-7 h-7'
                 aria-hidden='true'
                 fill='currentColor'
                 viewBox='0 0 74 74'
@@ -44,7 +35,7 @@ const Footer = () => {
             >
               <span className='sr-only'>GitHub</span>
               <svg
-                className='w-6 h-6'
+                className='w-7 h-7'
                 aria-hidden='true'
                 fill='currentColor'
                 viewBox='0 0 24 24'

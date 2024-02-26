@@ -1,3 +1,5 @@
+import { Disclosure, Transition } from "@headlessui/react"
+
 const Education = () => {
   return (
     <>

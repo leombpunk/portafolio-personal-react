@@ -17,7 +17,7 @@ const NavMenu = () => {
   return (
     <Disclosure
       as='nav'
-      className='w-full bg-transparent backdrop-blur-sm fixed border-b border-sky-300/50 z-10'
+      className='w-full bg-transparent backdrop-blur-lg fixed border-b border-sky-300/50 z-10'
     >
       {({ open }) => (
         <>
