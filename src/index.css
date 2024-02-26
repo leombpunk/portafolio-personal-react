@@ -17,7 +17,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -25,4 +27,13 @@ body {
   box-sizing: border-box;
   min-width: 320px;
   min-height: 100vh;
+}
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+ @media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }

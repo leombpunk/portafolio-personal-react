@@ -6,7 +6,7 @@ const Presentation = () => {
     <>
       <section
         id='presentation'
-        className='flex flex-col lg:flex-row items-center justify-between gap-5 w-full max-w-7xl min-h-svh max-2xl:min-h-[80svh] h-full mt-16 lg:mt-0 p-0 md:px-20'
+        className='flex flex-col lg:flex-row items-center justify-between gap-5 w-full max-w-7xl min-h-svh 3xl:min-h-[75svh] h-full mt-16 lg:mt-0 p-0 md:px-20 scroll-mt-16'
       >
         <div className='flex flex-col gap-3 p-5 lg:p-0 items-center lg:items-start'>
           <h1 className='text-6xl font-bold text-center lg:text-left'>
@@ -88,7 +88,7 @@ const Presentation = () => {
               // eslint-disable-next-line react/no-unknown-property
               fetchPriority='high'
               src={foto}
-              className='h-72 md:h-96 lg:h-80 xl:h-96 w-auto rounded-[50%] hover:shadow-sky-300 hover:shadow-2xl duration-500'
+              className='h-72 md:h-96 lg:h-72 xl:h-96 w-72 md:w-96 lg:w-72 xl:w-96 rounded-[50%] hover:shadow-sky-300 hover:shadow-2xl duration-500 aspect-square'
             />
           </picture>
         </div>
