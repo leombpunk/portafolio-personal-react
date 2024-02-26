@@ -4,8 +4,6 @@ import { Dialog, Transition } from "@headlessui/react"
 import { XMarkIcon } from "@heroicons/react/24/outline"
 
 const ProjectDetail = ({ data, status, setStatus }) => {
-  // const [open, setOpen] = useState(false)
-
   return (
     <Transition.Root show={status} as={Fragment}>
       <Dialog as='div' className='relative z-10' onClose={setStatus}>
@@ -33,7 +31,7 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                 leaveFrom='translate-x-0'
                 leaveTo='translate-x-full'
               >
-                <Dialog.Panel className='pointer-events-auto relative w-screen max-w-md'>
+                <Dialog.Panel className='pointer-events-auto relative w-screen max-w-lg'>
                   <Transition.Child
                     as={Fragment}
                     enter='ease-in-out duration-500'
@@ -46,7 +44,7 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                     <div className='absolute left-0 top-0 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4'>
                       <button
                         type='button'
-                        className='relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white'
+                        className='relative rounded-md bg-blue-950 text-white hover:text-sky-300'
                         onClick={() => setStatus(false)}
                       >
                         <span className='absolute -inset-2.5' />
@@ -55,14 +53,45 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                       </button>
                     </div>
                   </Transition.Child>
-                  <div className='flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl'>
+                  <div className='flex h-full flex-col overflow-y-scroll bg-blue-950 border-l-2 border-sky-300 py-6 shadow-xl'>
                     <div className='px-4 sm:px-6'>
-                      <Dialog.Title className='text-xl font-semibold leading-6 text-gray-900'>
+                      <Dialog.Title className='text-2xl font-semibold leading-6 text-white text-balance'>
                         {data.name}
                       </Dialog.Title>
                     </div>
-                    <div className='relative mt-6 flex-1 px-4 sm:px-6'>
-                      {/* Your content */}
+                    <div className='relative mt-6 flex flex-col px-4 sm:px-6'>
+                      <div className='flex flex-row gap-2 w-full px-1 mt-2 mb-5'>
+                        {data?.links?.map((link, index) => (
+                          <a
+                            key={index}
+                            href={link.href}
+                            title={link.name}
+                            className='bg-transparent border border-sky-300 rounded-xl px-6 py-3 shadow-lg hover:shadow-sky-300'
+                          >
+                            {link.name}
+                          </a>
+                        ))}
+                      </div>
+                      <div className='w-full px-1'>
+                        <picture>
+                          <img className='w-full aspect-video' />
+                        </picture>
+                      </div>
+                      <div className='px-1'>
+                        <p className='text-pretty text-lg italic'>
+                          {data.description}
+                        </p>
+                      </div>
+                      <div className='w-full px-1 mt-3 mb-5 flex flex-wrap gap-1'>
+                        {data.tech.map((tech, index) => (
+                          <span
+                            key={index}
+                            className='bg-transparent border border-sky-300 rounded-2xl px-2.5 py-1 shadow-md shadow-black/50'
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </Dialog.Panel>

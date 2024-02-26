@@ -1,5 +1,4 @@
 import { useState } from "react"
-import projectImg from "../assets/project-example.jpg"
 import ProjectDetail from "./projectDetail"
 import projectsData from "../data/projectsData"
 
@@ -33,14 +32,14 @@ const Projects = () => {
               >
                 <div
                   className='flex items-center justify-center w-full h-full group-hover:scale-110 duration-500 bg-gray-400 bg-center bg-cover blur group-hover:blur-0'
-                  style={{ backgroundImage: `url(${projectImg})` }}
+                  style={{ backgroundImage: `url(${project.imageSrc})` }}
                 ></div>
                 <h3 className='absolute text-center text-2xl font-semibold group-hover:text-sky-300 px-5 w-[250px] h-[230px]'>
                   {project.name}
                 </h3>
               </div>
             ))}
-            <div
+            {/* <div
               onClick={handleClick}
               className='flex flex-col items-center justify-center w-full h-[250px] bg-blue-950 border border-sky-300 rounded-xl overflow-hidden hover:cursor-pointer group'
             >
@@ -75,8 +74,8 @@ const Projects = () => {
               <h3 className='absolute text-center text-2xl font-semibold group-hover:text-sky-300 px-5 w-[250px] h-[230px]'>
                 Proyecto nombre muy muy muy largo
               </h3>
-            </div>
-          </div>
+            </div>*/}
+          </div> 
         </div>
       </section>
       <ProjectDetail
