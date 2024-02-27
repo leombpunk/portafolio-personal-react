@@ -31,10 +31,10 @@ const Projects = () => {
                 className='flex flex-col items-center justify-center w-full h-[250px] bg-blue-950 border border-sky-300 rounded-xl overflow-hidden hover:cursor-pointer group'
               >
                 <div
-                  className='flex items-center justify-center w-full h-full group-hover:scale-110 duration-500 bg-gray-400 bg-center bg-cover blur-0 lg:blur group-hover:blur-0'
+                  className='flex items-center justify-center w-full h-full group-hover:scale-110 duration-500 bg-gray-400 bg-center bg-cover blur-0 lg:blur-lg group-hover:blur-0'
                   style={{ backgroundImage: `url(${project.imageSrc})` }}
                 ></div>
-                <h3 className='absolute text-center text-2xl font-semibold group-hover:text-sky-300 px-5 w-[250px] h-[230px]'>
+                <h3 className='absolute text-center text-3xl font-semibold group-hover:text-sky-300 px-5 w-[250px] h-[230px]'>
                   {project.name}
                 </h3>
                 <div className='absolute flex flex-row justify-between gap-x-5 text-sky-300 text-lg group-hover:opacity-0 duration-200 w-[300px] mt-40'>
