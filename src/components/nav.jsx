@@ -1,4 +1,4 @@
-import { Disclosure } from "@headlessui/react"
+import { Disclosure, Transition } from "@headlessui/react"
 import { Bars3Icon, CodeBracketIcon, XMarkIcon } from "@heroicons/react/24/outline"
 
 const navigation = [
@@ -61,27 +61,35 @@ const NavMenu = () => {
               </div>
             </div>
           </div>
-
-          <Disclosure.Panel className='sm:hidden'>
-            <div className='space-y-1 px-2 pb-3 pt-2'>
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as='a'
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "text-sky-100"
-                      : "text-sky-300 hover:text-white",
-                    "block px-3 py-2 text-2xl font-medium text-center"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
+          <Transition
+            enter='transform transition ease-in-out duration-500 sm:duration-700'
+            enterFrom='-translate-x-full'
+            enterTo='translate-x-0'
+            leave='transform transition ease-in-out duration-500 sm:duration-700'
+            leaveFrom='translate-x-0'
+            leaveTo='translate-x-full'
+          >
+            <Disclosure.Panel className='sm:hidden'>
+              <div className='space-y-1 px-2 pb-3 pt-2'>
+                {navigation.map((item) => (
+                  <Disclosure.Button
+                    key={item.name}
+                    as='a'
+                    href={item.href}
+                    className={classNames(
+                      item.current
+                        ? "text-sky-100"
+                        : "text-sky-300 hover:text-white",
+                      "block px-3 py-2 text-2xl font-medium text-center"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </Disclosure.Button>
+                ))}
+              </div>
+            </Disclosure.Panel>
+          </Transition>
         </>
       )}
     </Disclosure>
