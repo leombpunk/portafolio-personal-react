@@ -74,12 +74,12 @@ const projectsData = [
     links: [
       {
         name: "GitHub",
-        href: "",
+        href: "https://github.com/leombpunk/grupo-oracion-sion",
       },
-      {
-        name: "Demo",
-        href: "",
-      },
+      // {
+      //   name: "Demo",
+      //   href: "",
+      // },
     ],
     tech: [
       "ReactJS",
@@ -103,7 +103,7 @@ const projectsData = [
     links: [
       {
         name: "GitHub",
-        href: "",
+        href: "https://github.com/leombpunk/recetas-de-cocina",
       },
     ],
     tech: [
@@ -137,7 +137,7 @@ const projectsData = [
     links: [
       {
         name: "GitHub",
-        href: "",
+        href: "https://github.com/leombpunk/medicapp-app",
       },
     ],
     tech: [
@@ -176,7 +176,7 @@ const projectsData = [
     links: [
       {
         name: "GitHub",
-        href: "",
+        href: "https://github.com/leombpunk/portafolio-app",
       },
     ],
     tech: [
@@ -219,7 +219,7 @@ const projectsData = [
     links: [
       {
         name: "GitHub",
-        href: "",
+        href: "https://github.com/leombpunk/softboos-sistema-pos",
       },
     ],
     tech: [
