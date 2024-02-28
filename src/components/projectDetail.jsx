@@ -2,6 +2,7 @@
 import { Fragment } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import { XMarkIcon } from "@heroicons/react/24/outline"
+import { Carousel } from "flowbite-react"
 
 const ProjectDetail = ({ data, status, setStatus }) => {
   return (
@@ -31,7 +32,7 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                 leaveFrom='translate-x-0'
                 leaveTo='translate-x-full'
               >
-                <Dialog.Panel className='pointer-events-auto relative w-screen max-w-lg'>
+                <Dialog.Panel className='pointer-events-auto relative w-screen max-w-2xl'>
                   <Transition.Child
                     as={Fragment}
                     enter='ease-in-out duration-500'
@@ -54,10 +55,27 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                     </div>
                   </Transition.Child>
                   <div className='flex h-full flex-col overflow-y-scroll bg-blue-950 border-l-2 border-sky-300 py-6 shadow-xl'>
-                    <div className='px-4 sm:px-6'>
+                    <div className='flex flex-row flex-wrap gap-2 px-4 sm:px-6'>
                       <Dialog.Title className='text-2xl font-semibold leading-6 text-white text-balance'>
                         {data?.name}
                       </Dialog.Title>
+                      {/* <p className="flex gap-2"> */}
+                      {data.status ? (
+                        <span className='text-sm text-gray-400 bg-transparent border border-sky-300 rounded-2xl px-2.5 py-1 shadow-md shadow-black/50'>
+                          {data.status}
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                      {data.context ? (
+                        <span className='text-sm text-gray-400 bg-transparent border border-sky-300 rounded-2xl px-2.5 py-1 shadow-md shadow-black/50'>
+                          {data.context}
+                        </span>
+                      ) : (
+                        ""
+                      )}
+
+                      {/* </p> */}
                     </div>
                     <div className='relative mt-6 flex flex-col px-4 sm:px-6'>
                       <div className='flex flex-row gap-2 w-full px-1 mt-2 mb-5'>
@@ -72,10 +90,23 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                           </a>
                         ))}
                       </div>
-                      <div className='w-full px-1'>
-                        <picture>
-                          <img alt="image-project" src={data?.imageSrc} className='shadow-md shadow-sky-300 rounded-xl bg-center bg-cover bg-no-repeat aspect-video' />
-                        </picture>
+                      <div className='w-full px-1 h-44 md:h-80'>
+                        {/* <picture> */}
+                        <Carousel
+                          slide={false}
+                          className='shadow-md shadow-sky-300 rounded-xl overflow-hidden'
+                        >
+                          {data?.imageSrc?.map((img, index) => (
+                            <img
+                              key={index}
+                              alt={`image-${data?.name}-${index}`}
+                              src={img}
+                              className='bg-center bg-cover bg-no-repeat aspect-video'
+                            />
+                          ))}
+                        </Carousel>
+                        {/* <img alt="image-project" src={data?.imageSrc[0]} className='shadow-md shadow-sky-300 rounded-xl bg-center bg-cover bg-no-repeat aspect-video' /> */}
+                        {/* </picture> */}
                       </div>
                       <div className='px-1 mt-3'>
                         <p className='text-pretty text-lg italic'>
