@@ -26,31 +26,35 @@ const Projects = () => {
               <div
                 key={index}
                 onClick={() => handleClick(project)}
-                className='flex flex-col items-center justify-center w-full h-[260px] bg-blue-950 border border-sky-300 rounded-xl overflow-hidden hover:cursor-pointer group'
+                className='flex flex-col items-center justify-center w-full bg-blue-950 border border-sky-300 rounded-xl overflow-hidden hover:cursor-pointer group hover:shadow-sky-300 hover:shadow-lg'
               >
                 <div
-                  className='flex items-center justify-center w-full h-full group-hover:scale-110 duration-500 bg-gray-400 bg-center bg-cover blur-0 lg:blur-lg group-hover:blur-0'
+                  className='flex items-center justify-center w-full h-[300px] group-hover:scale-105 duration-500 bg-gray-400 bg-center bg-cover'
                   style={{ backgroundImage: `url(${project.imageSrc[0]})` }}
-                ></div>
-                <h3 className='absolute text-center text-3xl font-semibold group-hover:text-sky-300 px-5 w-[250px] h-[230px]'>
+                >
+                  {/* <div className='relative flex flex-row justify-between px-3 text-sky-300 text-lg duration-200 w-full -mt-48'>
+                    {project.context ? (
+                      <span className='bg-gray-900/80 py-1 px-2 rounded-2xl border border-sky-300/50'>
+                        {project.context}
+                      </span>
+                    ) : (
+                      ""
+                    )}
+                    {project.status ? (
+                      <span className='bg-gray-900/80 py-1 px-2 rounded-2xl border border-sky-300/50'>
+                        {project.status}
+                      </span>
+                    ) : (
+                      ""
+                    )}
+                  </div> */}
+                </div>
+                {/* <picture>
+                  <img src={project.imageSrc[0]} alt="imagen representativa del proyecto" className="object-cover" />
+                </picture> */}
+                <h3 className='w-full text-center text-3xl bg-gray-800 font-semibold group-hover:text-sky-300 px-5 py-2 z-10'>
                   {project.name}
                 </h3>
-                <div className='absolute flex flex-row justify-between gap-x-5 text-sky-300 text-lg group-hover:opacity-0 duration-200 w-[300px] mt-40'>
-                  {project.context ? (
-                    <span className='bg-gray-900/80 py-1 px-2 rounded-2xl border border-sky-300/50'>
-                      {project.context}
-                    </span>
-                  ) : (
-                    ""
-                  )}
-                  {project.status ? (
-                    <span className='bg-gray-900/80 py-1 px-2 rounded-2xl border border-sky-300/50'>
-                      {project.status}
-                    </span>
-                  ) : (
-                    ""
-                  )}
-                </div>
               </div>
             ))}
           </div>

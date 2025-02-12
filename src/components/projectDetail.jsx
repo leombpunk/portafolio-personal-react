@@ -32,7 +32,7 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                 leaveFrom='translate-x-0'
                 leaveTo='translate-x-full'
               >
-                <Dialog.Panel className='pointer-events-auto relative w-screen max-w-2xl'>
+                <Dialog.Panel className='pointer-events-auto relative w-screen max-w-3xl'>
                   <Transition.Child
                     as={Fragment}
                     enter='ease-in-out duration-500'
@@ -55,42 +55,29 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                     </div>
                   </Transition.Child>
                   <div className='flex h-full flex-col overflow-y-scroll bg-blue-950 border-l-2 border-sky-300 py-6 shadow-xl'>
-                    <div className='flex flex-row flex-wrap gap-2 px-4 sm:px-6'>
-                      <Dialog.Title className='text-2xl font-semibold leading-6 text-white text-balance'>
+                    <div className='flex flex-col flex-wrap gap-2 px-4 sm:px-6'>
+                      <Dialog.Title className='text-4xl font-semibold leading-6 text-sky-300 text-balance'>
                         {data?.name}
                       </Dialog.Title>
-                      {/* <p className="flex gap-2"> */}
-                      {data.status ? (
-                        <span className='text-sm text-gray-400 bg-transparent border border-sky-300 rounded-2xl px-2.5 py-1 shadow-md shadow-black/50'>
-                          {data.status}
-                        </span>
-                      ) : (
-                        ""
-                      )}
-                      {data.context ? (
-                        <span className='text-sm text-gray-400 bg-transparent border border-sky-300 rounded-2xl px-2.5 py-1 shadow-md shadow-black/50'>
-                          {data.context}
-                        </span>
-                      ) : (
-                        ""
-                      )}
-
-                      {/* </p> */}
+                      <div className="flex flex-row gap-2 pt-2">
+                        {data.status ? (
+                          <span className='text-sm border bg-gray-800 border-sky-300 rounded-2xl px-2.5 py-1 shadow-md shadow-black/50'>
+                            {data.status}
+                          </span>
+                        ) : (
+                          ""
+                        )}
+                        {data.context ? (
+                          <span className='text-sm border bg-gray-800 border-sky-300 rounded-2xl px-2.5 py-1 shadow-md shadow-black/50'>
+                            {data.context}
+                          </span>
+                        ) : (
+                          ""
+                        )}
+                      </div>
                     </div>
                     <div className='relative mt-6 flex flex-col px-4 sm:px-6'>
-                      <div className='flex flex-row gap-2 w-full px-1 mt-2 mb-5'>
-                        {data?.links?.map((link, index) => (
-                          <a
-                            key={index}
-                            href={link.href}
-                            title={link.name}
-                            className='bg-transparent border border-sky-300 rounded-xl px-6 py-3 shadow-lg hover:shadow-sky-300'
-                          >
-                            {link.name}
-                          </a>
-                        ))}
-                      </div>
-                      <div className='w-full px-1 h-44 md:h-80'>
+                      <div className='w-full px-1 h-48 md:h-96'>
                         {/* <picture> */}
                         <Carousel
                           slide={false}
@@ -108,16 +95,30 @@ const ProjectDetail = ({ data, status, setStatus }) => {
                         {/* <img alt="image-project" src={data?.imageSrc[0]} className='shadow-md shadow-sky-300 rounded-xl bg-center bg-cover bg-no-repeat aspect-video' /> */}
                         {/* </picture> */}
                       </div>
+                      <div className='flex flex-row gap-2 w-full px-1 mt-4 mb-2'>
+                        {data?.links?.map((link, index) => (
+                          <a
+                            key={index}
+                            href={link.href}
+                            title={link.name}
+                            target="_blank"
+                            className='bg-transparent border border-sky-300 rounded-xl px-6 py-3 shadow-lg hover:shadow-sky-300'
+                          >
+                            Ver {link.name}
+                          </a>
+                        ))}
+                      </div>
                       <div className='px-1 mt-3'>
                         <p className='text-pretty text-lg italic'>
                           {data?.description}
                         </p>
                       </div>
                       <div className='w-full px-1 mt-3 mb-5 flex flex-wrap gap-1'>
+                        <h3 className="w-full text-2xl font-medium text-sky-300">Tecnologías utilizadas:</h3>
                         {data?.tech?.map((tech, index) => (
                           <span
                             key={index}
-                            className='bg-transparent border border-sky-300 rounded-2xl px-2.5 py-1 shadow-md shadow-black/50'
+                            className='border bg-gray-800 border-sky-300 rounded-2xl px-2.5 py-1 shadow-md shadow-black/50'
                           >
                             {tech}
                           </span>

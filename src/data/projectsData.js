@@ -23,8 +23,12 @@ import portfolio5 from "../assets/images/projects/appPortfolio/habilidades.png"
 import portfolio6 from "../assets/images/projects/appPortfolio/proyectos.png"
 
 //recipebook
-import recipe1 from "../assets/images/projects/recipebook/portada1.png"
-import recipe2 from "../assets/images/projects/recipebook/portada2.png"
+import recipe1 from "../assets/images/projects/recipebook/busqueda.png"
+import recipe2 from "../assets/images/projects/recipebook/portada.png"
+import recipe3 from "../assets/images/projects/recipebook/edicion-receta.png"
+import recipe4 from "../assets/images/projects/recipebook/receta-publica.png"
+import recipe5 from "../assets/images/projects/recipebook/registro.png"
+import recipe6 from "../assets/images/projects/recipebook/sesion.png"
 
 //medicapp
 import medicapp1 from "../assets/images/projects/medicapp/portada1.png"
@@ -50,7 +54,125 @@ import softboos11 from "../assets/images/projects/softboos/notificacion2.png"
 
 const projectsData = [
   {
-    name: "Sitio web Sion",
+    name: "MedicApp",
+    imageSrc: [
+      medicapp6,
+      medicapp1,
+      medicapp2,
+      medicapp3,
+      medicapp4,
+      medicapp5,
+      medicapp7,
+    ],
+    description:
+      "Proyecto Final de carrera. La App se centra en la gestión de la agenda de un consultorio (area de salud), también se destaca la gestión de pacientes, profesionales, usuarios de la App, configuración de la agenda e historia clínica del paciente.",
+    status: "", //terminado, en desarrollo, etc
+    context: "FullStack", //frontend, backend, fullstack
+    links: [
+      {
+        name: "GitHub",
+        href: "https://github.com/leombpunk/medicapp-app",
+      },
+      {
+        name: "Demo",
+        href: "https://medicapp-demo.web.app/",
+      }
+    ],
+    tech: [
+      "ReactJS",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Bootstrap5",
+      "React-bootstrap",
+      "React-hook-form",
+      "Axios",
+      "NodeJS",
+      "Express",
+      "Express-validator",
+      "Sequelize",
+      "JSON Web Token",
+      "Multer",
+      "MySQL8",
+      "ElectronJS",
+    ],
+  },
+  {
+    name: "Sistema POS",
+    imageSrc: [
+      softboos1,
+      softboos2,
+      softboos3,
+      softboos4,
+      softboos5,
+      softboos6,
+      softboos7,
+      softboos8,
+      softboos9,
+      softboos10,
+      softboos11,
+    ],
+    description:
+      "Sistema de punto de venta, controla tus ventas, compras, productos, clientes, etc., informes y gráficas de ventas. Desarrollado en PHP8, construí un framework minimalista con patrón de diseño MVC.",
+    status: "", //terminado, en desarrollo, etc
+    context: "FullStack", //frontend, backend, fullstack
+    links: [
+      {
+        name: "GitHub",
+        href: "https://github.com/leombpunk/softboos-sistema-pos",
+      },
+      {
+        name:"Demo", 
+        href:"https://leandev.alwaysdata.net/"
+      },
+    ],
+    tech: [
+      "PHP8",
+      "HTML5",
+      "CSS3",
+      "Bootstrap 4.3",
+      "jQuery",
+      "JavaScript",
+      "DataTables",
+      "charts.js",
+      "SweetAlert.js",
+      "Template-Valiadmin",
+      "MariaDB 10",
+      "XAMPP",
+    ],
+  },
+  {
+    name: "Recipe App",
+    imageSrc: [recipe1, recipe2, recipe3, recipe4, recipe5, recipe6],
+    description:
+      "Proyecto de recetas de cocina. Alguna vez necesitaste cocinar para una ocacion especial, para alguien especial o simplemente te dio hambrita; pues aquí la solución, una App donde podras almacenar todas tus recetas, las podras compartir con otros usuarios y porque no también con tus amigos.",
+    status: "Develop", //terminado, en desarrollo, etc
+    context: "FullStack", //frontend, backend, fullstack
+    links: [
+      {
+        name: "GitHub",
+        href: "https://github.com/leombpunk/recetas-de-cocina",
+      },
+      {
+        name: "Demo",
+        href: "https://projectrecipebookapp.netlify.app/",
+      }
+    ],
+    tech: [
+      "ReactJS",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "TailwindCSS",
+      "NodeJS",
+      "Express",
+      "JSON Web Token",
+      "Multer",
+      "MySQL8",
+    ],
+  },
+  {
+    name: "Grupo Sion",
     imageSrc: [
       sion1,
       sion2,
@@ -94,72 +216,6 @@ const projectsData = [
     ],
   },
   {
-    name: "Recetas de cocina",
-    imageSrc: [recipe1, recipe2],
-    description:
-      "Proyecto de recetas de cocina. Alguna vez necesitaste cocinar para una ocacion especial, para alguien especial o simplemente te dio hambrita; pues aquí la solución, una App donde podras almacenar todas tus recetas, las podras compartir con otros usuarios y porque no también con tus amigos.",
-    status: "Develop", //terminado, en desarrollo, etc
-    context: "FullStack", //frontend, backend, fullstack
-    links: [
-      {
-        name: "GitHub",
-        href: "https://github.com/leombpunk/recetas-de-cocina",
-      },
-    ],
-    tech: [
-      "ReactJS",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "TailwindCSS",
-      "NodeJS",
-      "Express",
-      "JSON Web Token",
-      "Multer",
-      "MySQL8",
-    ],
-  },
-  {
-    name: "MedicApp",
-    imageSrc: [
-      medicapp6,
-      medicapp1,
-      medicapp2,
-      medicapp3,
-      medicapp4,
-      medicapp5,
-      medicapp7,
-    ],
-    description:
-      "Proyecto Final de carrera. La App se centra en la gestión de la agenda de un consultorio (area de salud), también se destaca la gestión de pacientes, profesionales, usuarios de la App, configuración de la agenda e historia clínica del paciente.",
-    status: "", //terminado, en desarrollo, etc
-    context: "FullStack", //frontend, backend, fullstack
-    links: [
-      {
-        name: "GitHub",
-        href: "https://github.com/leombpunk/medicapp-app",
-      },
-    ],
-    tech: [
-      "ReactJS",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Bootstrap5",
-      "React-bootstrap",
-      "React-hook-form",
-      "Axios",
-      "NodeJS",
-      "Express",
-      "Express-validator",
-      "Sequelize",
-      "JSON Web Token",
-      "Multer",
-      "MySQL8",
-      "ElectronJS",
-    ],
-  },
-  {
     name: "PortfolioApp",
     imageSrc: [
       portfolio2,
@@ -195,46 +251,6 @@ const projectsData = [
       "Firebase",
       "Render",
       "Clever Cloud",
-    ],
-  },
-  {
-    name: "SoftBoos (sistema POS)",
-    imageSrc: [
-      softboos1,
-      softboos2,
-      softboos3,
-      softboos4,
-      softboos5,
-      softboos6,
-      softboos7,
-      softboos8,
-      softboos9,
-      softboos10,
-      softboos11,
-    ],
-    description:
-      "Sistema de punto de venta, controla tus ventas, compras, productos, clientes, etc., informes y gráficas de ventas. Desarrollado en PHP8, construí un framework minimalista con patrón de diseño MVC.",
-    status: "", //terminado, en desarrollo, etc
-    context: "FullStack", //frontend, backend, fullstack
-    links: [
-      {
-        name: "GitHub",
-        href: "https://github.com/leombpunk/softboos-sistema-pos",
-      },
-    ],
-    tech: [
-      "PHP8",
-      "HTML5",
-      "CSS3",
-      "Bootstrap 4.3",
-      "jQuery",
-      "JavaScript",
-      "DataTables",
-      "charts.js",
-      "SweetAlert.js",
-      "Template-Valiadmin",
-      "MariaDB 10",
-      "XAMPP",
     ],
   },
 ]
