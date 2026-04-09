@@ -52,6 +52,31 @@ import softboos9 from "../assets/images/projects/softboos/perfil.png"
 import softboos10 from "../assets/images/projects/softboos/notificacion1.png"
 import softboos11 from "../assets/images/projects/softboos/notificacion2.png"
 
+import tcg1 from "../assets/images/projects/tcgcreativeapp/home1.webp"
+import tcg2 from "../assets/images/projects/tcgcreativeapp/home2.webp"
+import tcg3 from "../assets/images/projects/tcgcreativeapp/creador.webp"
+import tcg4 from "../assets/images/projects/tcgcreativeapp/login.webp"
+import tcg5 from "../assets/images/projects/tcgcreativeapp/cartas-opciones.webp"
+import tcg6 from "../assets/images/projects/tcgcreativeapp/cartas2.webp"
+import tcg7 from "../assets/images/projects/tcgcreativeapp/carta-logged.webp"
+import tcg8 from "../assets/images/projects/tcgcreativeapp/carta-logged2.webp"
+import tcg9 from "../assets/images/projects/tcgcreativeapp/carta-publicada.webp"
+import tcg10 from "../assets/images/projects/tcgcreativeapp/carta-qr.webp"
+import tcg11 from "../assets/images/projects/tcgcreativeapp/perfil.webp"
+
+import ddapp1 from "../assets/images/projects/discernimientodiarioapp/inicio.webp"
+import ddapp2 from "../assets/images/projects/discernimientodiarioapp/1.webp"
+import ddapp3 from "../assets/images/projects/discernimientodiarioapp/2.webp"
+import ddapp4 from "../assets/images/projects/discernimientodiarioapp/3.webp"
+import ddapp5 from "../assets/images/projects/discernimientodiarioapp/4.webp"
+import ddapp6 from "../assets/images/projects/discernimientodiarioapp/5.webp"
+import ddapp7 from "../assets/images/projects/discernimientodiarioapp/6.webp"
+import ddapp8 from "../assets/images/projects/discernimientodiarioapp/7.webp"
+import ddapp9 from "../assets/images/projects/discernimientodiarioapp/8.webp"
+import ddapp10 from "../assets/images/projects/discernimientodiarioapp/9.webp"
+import ddapp11 from "../assets/images/projects/discernimientodiarioapp/10.webp"
+import ddapp12 from "../assets/images/projects/discernimientodiarioapp/11.webp"
+
 const projectsData = [
   {
     name: "MedicApp",
@@ -139,6 +164,98 @@ const projectsData = [
       "Template-Valiadmin",
       "MariaDB 10",
       "XAMPP",
+    ],
+  },
+  {
+    name: "Disernimiento Diario",
+    imageSrc: [
+      ddapp1,
+      ddapp2,
+      ddapp3,
+      ddapp4,
+      ddapp5,
+      ddapp6,
+      ddapp7,
+      ddapp8,
+      ddapp9,
+      ddapp10,
+      ddapp11,
+      ddapp12,
+    ],
+    description:
+      `Discernimiento Diario es un proyecto que nace de la fe y del deseo de acompañar a otros. ¿Qué ofrece la aplicación?
+Ofrece una cita bíblica nueva cada día para reflexionar. Notas personales para guardar lo que te inspiró cada lectura.
+Acceso offline a la Biblia gracias a SQLite. Sección para rezar el rosario. Notificaciones locales configurables (horario y mensaje).
+ Modo claro/oscuro. Calendario con citas anteriores y futuras. Sistema de marcadores para guardar tus pasajes favoritos.`,
+    status: "", //terminado, en desarrollo, etc
+    context: "Mobile", //frontend, backend, fullstack
+    links: [
+      // {
+      //   name: "GitHub",
+      //   href: "https://github.com/leombpunk/medicapp-app",
+      // },
+      // {
+      //   name: "Demo",
+      //   href: "https://medicapp-demo.web.app/",
+      // }
+    ],
+    tech: [
+      "React Native",
+      "TypeScript",
+      "Expo",
+      "notifee",
+      "lottie-react-native",
+      "SQLite",
+      "Android Studio",
+    ],
+  },
+  {
+    name: "TCG Creative",
+    imageSrc: [
+      tcg3,
+      tcg1,
+      tcg2,
+      tcg4,
+      tcg5,
+      tcg6,
+      tcg7,
+      tcg8,
+      tcg9,
+      tcg10,
+      tcg11,
+    ],
+    description:
+      "TCG-Creative, una app pensada para crear cartas al estilo de los juegos de cartas coleccionables (TCG). Desde chico me fascinaban las cartas, pero nunca pude tener una colección. Ahora, pude darme el gusto de crear mis propias cartas digitales y compartirlas.",
+    status: "", //terminado, en desarrollo, etc
+    context: "FullStack", //frontend, backend, fullstack
+    links: [
+      // {
+      //   name: "GitHub",
+      //   href: "https://github.com/leombpunk/softboos-sistema-pos",
+      // },
+      {
+        name:"Demo (frontend)", 
+        href:"https://simple-tcg-maker.web.app"
+      },
+    ],
+    tech: [
+      "ReactJS",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "TailwindCSS",
+      "Atropos",
+      "tsparticles",
+      "qrcode",
+      "SwiperJS",
+      "NodeJS",
+      "NestJS",
+      "TypeScript",
+      "JSON Web Token",
+      "Multer",
+      "Sharp",
+      "Sequelize",
+      "MySQL8",
     ],
   },
   {

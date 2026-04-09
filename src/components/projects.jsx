@@ -1,14 +1,25 @@
 import { useState } from "react"
 import ProjectDetail from "./projectDetail"
 import projectsData from "../data/projectsData"
+import usePagination from "../hooks/usePagination"
 
 const Projects = () => {
   const [sideOpen, setSideOpen] = useState(false)
   const [projecData, setProjectData] = useState({})
+  const { items, currentPage, setPage, totalItems, totalPages } =
+    usePagination(projectsData)
 
   const handleClick = (data) => {
     setSideOpen(true)
     setProjectData(data)
+  }
+
+  const handleClickNextPage = () => {
+    setPage(currentPage+1)
+  }
+
+  const handleClickPrevPage = () => {
+    setPage(currentPage-1)
   }
 
   return (
