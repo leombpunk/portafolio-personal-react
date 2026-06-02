@@ -4,6 +4,7 @@ import { Bars3Icon, CodeBracketIcon, XMarkIcon } from "@heroicons/react/24/outli
 const navigation = [
   { name: "Incio", href: "#presentation", current: true },
   { name: "Acerca de", href: "#aboutme", current: false },
+  { name: "Experiencia", href: "#experience", current: false },
   { name: "Proyectos", href: "#projects", current: false },
   { name: "Educación", href: "#education", current: false },
   { name: "Habilidades", href: "#skills", current: false },

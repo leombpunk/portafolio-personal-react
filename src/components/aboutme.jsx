@@ -6,7 +6,7 @@ const AboutMe = () => {
         className='flex flex-col lg:flex-row items-start justify-between gap-10 max-w-7xl w-full h-full mt-10 px-2 md:px-20 py-10 scroll-mt-16'
       >
         {/* <div className='grid grid-cols-2 grid-rows-1 gap-5 px-16'> */}
-        <div className='w-full h-full px-5 lg:px-10 py-5 text-balance flex flex-col gap-3 border-l-8 border-sky-300/50 bg-blue-900/45 rounded-md shadow-lg order-2 lg:order-1'>
+        <div className='w-full h-full px-5 lg:px-10 py-5 text-balance flex flex-col gap-3 border-l-8 border-sky-300/50 bg-blue-900/45 rounded-md shadow-lg order-2 lg:order-2'>
           <p className='text-pretty  text-lg'>
             Desarrollador <span className='text-sky-300'>fullstack</span> con
             una sólida formación en tecnologías front-end y back-end, me
@@ -36,7 +36,7 @@ const AboutMe = () => {
             para llevar ideas desde la concepción hasta la implementación.
           </p>
         </div>
-        <h2 className='text-4xl text-center lg:text-left font-bold text-balance h-full w-full lg:w-96 px-5 py-5 order-1 lg:order-2'>
+        <h2 className='text-4xl text-center lg:text-left font-bold text-balance h-full w-full lg:w-96 px-5 py-5 order-1 lg:order-1'>
           Sobre <span className='text-sky-300'>mí</span>
         </h2>
         {/* </div> */}

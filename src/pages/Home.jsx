@@ -1,5 +1,6 @@
 import AboutMe from "../components/aboutme"
 import Education from "../components/education"
+import Experience from "../components/experience"
 import Footer from "../components/footer"
 import NavMenu from "../components/nav"
 import Presentation from "../components/presentation"
@@ -13,6 +14,7 @@ const Home = () => {
       <NavMenu />
       <Presentation />
       <AboutMe />
+      <Experience />
       <Projects />
       <Education />
       <Skills />
